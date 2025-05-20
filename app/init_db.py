@@ -5,6 +5,7 @@ from config import URL_DB
 
 # import des modèles...
 from models.db.base import Base
+from models.db import race, personnage, anneau, quete, personnage_quete
 
 
 # initialisation des objets
@@ -25,6 +26,7 @@ try:
 	# Création des tables si elles n'existent pas 
 	Base.metadata.create_all(bind=engine)
 
+	db_connected = True
 	print("-----------------------")
 	print("Connexion DB + modèles créer")
 	print("-----------------------")
