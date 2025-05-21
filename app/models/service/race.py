@@ -3,7 +3,7 @@ from .db_tools import DBTools
 
 class Race(DBTools):
     def __init__(self, session):
-        super().__init__(session)
+        super().__init__(session)  # initialise self.session depuis DBTools
 
     def peupler(self):
         """
@@ -18,7 +18,6 @@ class Race(DBTools):
             RaceModel(nom="Elfe"),
             RaceModel(nom="Nain"),
             RaceModel(nom="Hobbit"),
-            RaceModel(nom="Dunedain"),
             RaceModel(nom="Orc"),
         ]
 

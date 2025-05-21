@@ -10,4 +10,4 @@ class Quete(Base):
     titre = Column(String, nullable=False)
 
     # Relation N:N avec Personnages
-    participants = relationship("Personnage", secondary=personnage_quete, back_populates="quete")
+    participants = relationship("Personnage", secondary=personnage_quete, back_populates="quetes")

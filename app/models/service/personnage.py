@@ -3,6 +3,11 @@ from models.db.personnage import Personnage as PersonnageModel
 from .db_tools import DBTools  # outil de base pour session + commit
 
 class Personnage(DBTools):
+    """
+    Classe représentant la logique de gestion des personnages.
+    Utilise à la fois SQLAlchemy ORM et requêtes SQL brutes.
+    Hérite de DBTools pour la session et les transactions.
+    """
 
     def __init__(self, session):
         super().__init__(session)
